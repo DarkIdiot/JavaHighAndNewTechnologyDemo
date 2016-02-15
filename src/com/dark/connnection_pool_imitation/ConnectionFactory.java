@@ -76,7 +76,7 @@ public class ConnectionFactory
     {
         try{
             unbind(name);
-        }catch(Exception e){
+        }catch(NameNotFoundException e){
         	e.printStackTrace();
         }
         return bind(name, param);
@@ -93,7 +93,7 @@ public class ConnectionFactory
             DataSourceImpl dsi = (DataSourceImpl)dataSource;
             try{
                 dsi.close();
-            }catch(Exception e){
+            }catch(SQLException e){
             	e.printStackTrace();
             }finally{
                 dsi = null;
