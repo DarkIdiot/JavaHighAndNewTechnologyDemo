@@ -1,0 +1,6 @@
+二月 04, 2016 9:51:53 下午 com.dark.logger.LogHandler LoggerHandlerDemo
+严重: Logger sever 
+二月 04, 2016 9:51:53 下午 com.dark.logger.LogHandler LoggerHandlerDemo
+警告: Logger warning 
+二月 04, 2016 9:51:53 下午 com.dark.logger.LogHandler LoggerHandlerDemo
+信息: Logger info 

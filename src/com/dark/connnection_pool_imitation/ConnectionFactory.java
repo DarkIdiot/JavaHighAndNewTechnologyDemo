@@ -2,7 +2,6 @@ package com.dark.connnection_pool_imitation;
 
 import java.sql.SQLException;
 import java.util.Hashtable;
-
 import javax.naming.NameAlreadyBoundException;
 import javax.naming.NameNotFoundException;
 import javax.sql.DataSource;
@@ -16,23 +15,23 @@ import javax.sql.DataSource;
 public class ConnectionFactory
 {
     //该哈希表用来保存数据源名和连接池对象的关系表
-    static Hashtable<String,DataSource> connectionPools = null;
+    static Hashtable connectionPools = null;
     static{
-        connectionPools = new Hashtable<String,DataSource>(2,0.75F);
+        connectionPools = new Hashtable(2,0.75F);
     } 
     /**
      * 从连接池工厂中获取指定名称对应的连接池对象
-     * @param dataSource    连接池对象对应的名称
+     * @param name    连接池对象对应的名称
      * @return DataSource   返回名称对应的连接池对象
      * @throws NameNotFoundException    无法找到指定的连接池
      */
-    public static DataSource lookup(String dataSource) 
+    public static DataSource lookup(String name) 
         throws NameNotFoundException
     {
         Object ds = null;
-        ds = connectionPools.get(dataSource);
+        ds = connectionPools.get(name);
         if(ds == null || !(ds instanceof DataSource))
-            throw new NameNotFoundException(dataSource);
+            throw new NameNotFoundException(name);
         return (DataSource)ds;
     }
     /**
@@ -50,7 +49,7 @@ public class ConnectionFactory
         throws NameAlreadyBoundException,ClassNotFoundException,
                 IllegalAccessException,InstantiationException,SQLException
     {
-        DataSourceImpl source = null;
+        DataSource source = null;
         try{
             lookup(name);
             throw new NameAlreadyBoundException(name);

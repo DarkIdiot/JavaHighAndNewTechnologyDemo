@@ -18,11 +18,12 @@ public class _Connection implements InvocationHandler {
 	    //数据库的忙状态
 	    private boolean inUse = false;
 	    //用户最后一次访问该连接方法的时间
-	    private long lastAccessTime = System.currentTimeMillis();
+	    private long lastAccessTime;
 	     
 	    _Connection(Connection conn, boolean inUse){
 	        this.conn = conn;
 	        this.inUse = inUse;
+	        this.lastAccessTime = System.currentTimeMillis();
 	    }
 	    /**
 	     * Returns the conn.
@@ -30,10 +31,10 @@ public class _Connection implements InvocationHandler {
 	     */
 	    public Connection getConnection() {
 	        //返回数据库连接conn的接管类，以便截住close方法
-	        Connection conn2 = (Connection)Proxy.newProxyInstance(
+	        Connection connProxy = (Connection)Proxy.newProxyInstance(
 	            conn.getClass().getClassLoader(),
 	            conn.getClass().getInterfaces(),this);
-	        return conn2;
+	        return connProxy;
 	    }
 	    /**
 	     * 该方法真正的关闭了数据库的连接
