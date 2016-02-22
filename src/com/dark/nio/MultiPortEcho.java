@@ -36,7 +36,7 @@ public class MultiPortEcho
     }
 
     while (true) {
-      int num = selector.select();
+      int num = selector.select(); //监听所有被注册的端口，并选择通道。如果所有端口都没有建立连接的请求，才会发生阻塞。
 
       Set selectedKeys = selector.selectedKeys();
       Iterator it = selectedKeys.iterator();

@@ -38,7 +38,8 @@ public class LogLevelDemo {
 	
 	public static void main(String[] args) {
 		LogLevelDemo ld = new LogLevelDemo();
-//		ld.LoggerLevelDemo();
+		ld.LoggerLevelDemo();
+		System.out.println("==================== Next Demo ====================");
 		ld.LoggerLevelModifiedDemo();
 	}
 }

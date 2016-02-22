@@ -36,6 +36,7 @@ public class PathDemo {
 	public static void main(String[] args) {
 		PathDemo demo = new PathDemo();
 		demo.absolutelyPathDemo();
+		System.out.println("====================== Next Demo ======================");
 		demo.relativePathDemo();
 	}
 }
