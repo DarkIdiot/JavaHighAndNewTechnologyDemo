@@ -6,19 +6,19 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * JDK 1.7 ĞÂÔöÌØĞÔ
- * 	ÁâĞÎÓï·¨£º
- * 	1.7Ö®ºóÔÊĞíÔÚ¹¹ÔìÆ÷Ö®ºó²»ĞèÒª´øÍêÕûµÄ·ºĞÍĞÅÏ¢£¬Ö»Òª¸ø³öÒ»¶Ô(<>)¼´¿É¡£java¿ÉÒÔÍÆ¶Ï¼âÀ¨ºÅÀïÃæÓ¦¸ÃÊÇÊ²Ã´·ºĞÍĞÅÏ¢¡£
- * 	ÁâĞÎÓï·¨ÊµÖÊÉÏ¶ÔÔ­ÓĞµÄ·ºĞÍ²¢Ã»ÓĞÊ²Ã´¸Ä±ä£¬Ö»ÊÇ¸üºÃµÄ¼ò»¯ÁË·ºĞÍ±à³Ì¡£
+ * JDK 1.7 æ–°å¢ç‰¹æ€§
+ * 	è±å½¢è¯­æ³•ï¼š
+ * 	1.7ä¹‹åå…è®¸åœ¨æ„é€ å™¨ä¹‹åä¸éœ€è¦å¸¦å®Œæ•´çš„æ³›å‹ä¿¡æ¯ï¼Œåªè¦ç»™å‡ºä¸€å¯¹(<>)å³å¯ã€‚javaå¯ä»¥æ¨æ–­å°–æ‹¬å·é‡Œé¢åº”è¯¥æ˜¯ä»€ä¹ˆæ³›å‹ä¿¡æ¯ã€‚
+ * 	è±å½¢è¯­æ³•å®è´¨ä¸Šå¯¹åŸæœ‰çš„æ³›å‹å¹¶æ²¡æœ‰ä»€ä¹ˆæ”¹å˜ï¼Œåªæ˜¯æ›´å¥½çš„ç®€åŒ–äº†æ³›å‹ç¼–ç¨‹ã€‚
  * @author idiot
  * @version 1.0
- * @date 2016Äê2ÔÂ3ÈÕ ÏÂÎç9:54:15
+ * @date 2016å¹´2æœˆ3æ—¥ ä¸‹åˆ9:54:15
  */
 public class GennericDemo {
 	public static void main(String[] args) {
 		List<String> list = new ArrayList<String>();
 		Map<String, Object> map = new HashMap<String, Object>();
-		//  µÈ¼ÛÓÚ
+		//  ç­‰ä»·äº
 		List<String> listOptimize = new ArrayList<>();
 		Map<String, Object> mapOptimize = new HashMap<>();
 	}

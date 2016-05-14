@@ -4,16 +4,16 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 
 /**
- * 	JDK 1.7 ÐÂÔöÌØÐÔ
- * 	java±àÒëÆ÷»áÖ´ÐÐ¸ü¼ÓÏ¸ÖÂµÄ¼ì²é£¬java±àÒëÆ÷»á¼ì²éthrowsÓï¾äÅ×³öµÄÒì³£µÄÊµ¼ÊÀàÐÍ¡£
+ * 	JDK 1.7 æ–°å¢žç‰¹æ€§
+ * 	javaç¼–è¯‘å™¨ä¼šæ‰§è¡Œæ›´åŠ ç»†è‡´çš„æ£€æŸ¥ï¼Œjavaç¼–è¯‘å™¨ä¼šæ£€æŸ¥throwsè¯­å¥æŠ›å‡ºçš„å¼‚å¸¸çš„å®žé™…ç±»åž‹ã€‚
  * @author idiot
  * @version 1.0
- * @date 2016Äê2ÔÂ4ÈÕ ÏÂÎç12:06:06
+ * @date 2016å¹´2æœˆ4æ—¥ ä¸‹åˆ12:06:06
  */
 public class EnhanceThrowsSegement {
 	/**
-	 * JDK1.7Ö®Ç°
-	 * 	ÔÚcatch´úÂë¿éÀïÃæ¶ÔÓÚ{@link FileNotFoundException}½øÐÐÁËÒì³£µÄ¶þ´Î·â×°¡£ÔÚÉùÃ÷Å×³öÒì³£µÄÊ±ºò¾Í±ØÐëÊÇ¶ÔÓ¦µÄÒì³£»òÕßÆä¸¸Àà¡£
+	 * JDK1.7ä¹‹å‰
+	 * 	åœ¨catchä»£ç å—é‡Œé¢å¯¹äºŽ{@link FileNotFoundException}è¿›è¡Œäº†å¼‚å¸¸çš„äºŒæ¬¡å°è£…ã€‚åœ¨å£°æ˜ŽæŠ›å‡ºå¼‚å¸¸çš„æ—¶å€™å°±å¿…é¡»æ˜¯å¯¹åº”çš„å¼‚å¸¸æˆ–è€…å…¶çˆ¶ç±»ã€‚
 	 *  
 	 */
 	public void oldDemo() throws Exception{
@@ -25,8 +25,8 @@ public class EnhanceThrowsSegement {
 		}
 	}
 	/**
-	 *  JDK1.7Ö®ºó
-	 *  ÔÚcatch´úÂë¿éÀïÃæÓÃExceptionÈ¥½ÓÊÕ{@link FileNotFoundException}²¢Å×³ö¡£ÔÚÉùÃ÷Å×³öÒì³£µÄÊ±ºò¿ÉÒÔÊÇ²¶»ñµÄµÄÒì³£µÄÊµ¼ÊÀàÐÍ¡£
+	 *  JDK1.7ä¹‹åŽ
+	 *  åœ¨catchä»£ç å—é‡Œé¢ç”¨ExceptionåŽ»æŽ¥æ”¶{@link FileNotFoundException}å¹¶æŠ›å‡ºã€‚åœ¨å£°æ˜ŽæŠ›å‡ºå¼‚å¸¸çš„æ—¶å€™å¯ä»¥æ˜¯æ•èŽ·çš„çš„å¼‚å¸¸çš„å®žé™…ç±»åž‹ã€‚
 	 *  
 	 */
 	public void newDemo() throws FileNotFoundException {

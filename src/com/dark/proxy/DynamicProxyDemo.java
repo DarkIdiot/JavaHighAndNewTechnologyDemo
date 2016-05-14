@@ -9,7 +9,7 @@ import java.util.logging.Logger;
 /**
  * @author idiot
  * @version 1.0
- * @date 2016Äê1ÔÂ27ÈÕ ÏÂÎç4:52:53
+ * @date 2016å¹´1æœˆ27æ—¥ ä¸‹åˆ4:52:53
  */
 public class DynamicProxyDemo {
 	public static void main(String[] args) {
@@ -36,7 +36,7 @@ class DynamicProxy implements InvocationHandler {
 	}
 
 	/**
-	 * ±»´úÀíÀàÖ´ĞĞ·½·¨Ö®Ç°»áÖ´ĞĞ¸Ã·½·¨¡£
+	 * è¢«ä»£ç†ç±»æ‰§è¡Œæ–¹æ³•ä¹‹å‰ä¼šæ‰§è¡Œè¯¥æ–¹æ³•ã€‚
 	 */
 	@Override
 	public Object invoke(Object proxy, Method method, Object[] args)

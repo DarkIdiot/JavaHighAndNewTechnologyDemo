@@ -1,27 +1,27 @@
 package com.dark.jdk7NewCharacteristic;
 
 /**
- * JDK 1.7 ĞÂÔöÌØĞÔ
- * 	ÔÊĞíswitchÓï¾äµÄ¿ØÖÆ±í´ïÊ½ÊÇjava.lang.StringÀàĞÍµÄ±äÁ¿»òÕß±í´ïÊ½¡£²»ÄÜÊÇStringBuffer»òÕßStringBuilder
+ * JDK 1.7 æ–°å¢ç‰¹æ€§
+ * 	å…è®¸switchè¯­å¥çš„æ§åˆ¶è¡¨è¾¾å¼æ˜¯java.lang.Stringç±»å‹çš„å˜é‡æˆ–è€…è¡¨è¾¾å¼ã€‚ä¸èƒ½æ˜¯StringBufferæˆ–è€…StringBuilder
  * @author idiot
  * @version 1.0
- * @date 2016Äê2ÔÂ3ÈÕ ÏÂÎç9:43:35
+ * @date 2016å¹´2æœˆ3æ—¥ ä¸‹åˆ9:43:35
  */
 public class SwitchDemo {
 	public static void main(String[] args) {
-		String session = "ÏÄÌì";
+		String session = "å¤å¤©";
 		switch (session) {
-		case "´ºÌì":
-			System.out.println("´ºÌì");
+		case "æ˜¥å¤©":
+			System.out.println("æ˜¥å¤©");
 			break;
-		case "ÏÄÌì":
-			System.out.println("ÏÄÌì");
+		case "å¤å¤©":
+			System.out.println("å¤å¤©");
 			break;
-		case "ÇïÌì":
-			System.out.println("ÇïÌì");
+		case "ç§‹å¤©":
+			System.out.println("ç§‹å¤©");
 			break;
-		case "¶¬Ìì":
-			System.out.println("¶¬Ìì");
+		case "å†¬å¤©":
+			System.out.println("å†¬å¤©");
 			break;
 		default:
 			break;

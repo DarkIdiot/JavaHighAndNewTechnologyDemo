@@ -13,11 +13,11 @@ import java.lang.annotation.Target;
 @Inherited
 public @interface SetValue {
 	/**
-	 *	´«ÈëµÄÖµ 
+	 *	ä¼ å…¥çš„å€¼ 
 	 */
 	String value();
 	/**
-	 * ´«ÈëÖµµÄÀàĞÍ
+	 * ä¼ å…¥å€¼çš„ç±»å‹
 	 */
 	Class<?> type();
 	

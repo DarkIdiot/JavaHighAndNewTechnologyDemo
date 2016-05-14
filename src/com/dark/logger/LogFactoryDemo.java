@@ -9,13 +9,13 @@ import java.util.logging.SimpleFormatter;
 /**
  * @author idiot
  * @version 1.0
- * @date 2016Äê2ÔÂ4ÈÕ ÏÂÎç10:10:52
+ * @date 2016å¹´2æœˆ4æ—¥ ä¸‹åˆ10:10:52
  */
 public class LogFactoryDemo {
 }
 
 /**
- * ¾²Ì¬¹¤³§µÄÊµÏÖ
+ * é™æ€å·¥å‚çš„å®ç°
  */
 class LoggerFactory{
 	private static Logger logger = Logger.getLogger(LoggerFactory.class.getName());
@@ -37,7 +37,7 @@ class LoggerFactory{
 	}
 }
 /**
- * µ¥ÀıÄ£Ê½ÊµÏÖ
+ * å•ä¾‹æ¨¡å¼å®ç°
  */
 class LoggerFactorySingleton{
 	private static LoggerFactorySingleton factorySingleton = new LoggerFactorySingleton();

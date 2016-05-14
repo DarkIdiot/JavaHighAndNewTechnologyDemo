@@ -1,18 +1,18 @@
 package com.dark.jdk7NewCharacteristic;
 
 /**
- * JDK 1.7 ĞÂÔöÌØĞÔ
- * Ê¹ÓÃ0b»òÕß0BÖ±½ÓÊäÈë¶ş½øÖÆ´úÂë
+ * JDK 1.7 æ–°å¢ç‰¹æ€§
+ * ä½¿ç”¨0bæˆ–è€…0Bç›´æ¥è¾“å…¥äºŒè¿›åˆ¶ä»£ç 
  * @author idiot
  * @version 1.0
- * @date 2016Äê2ÔÂ3ÈÕ ÏÂÎç8:50:22
+ * @date 2016å¹´2æœˆ3æ—¥ ä¸‹åˆ8:50:22
  */
 public class BinaryDemo {
 	public static void main(String[] args) {
-		byte b = -0b1111111; // -127 Ô­Âë
-		short s = 0B111111111111111; //32767 Ô­Âë
-		int i = 0b11111111111111111111111111111111; // -1  ²¹Âë
-		long l = 0B10000000; //128 ²¹Âë
+		byte b = -0b1111111; // -127 åŸç 
+		short s = 0B111111111111111; //32767 åŸç 
+		int i = 0b11111111111111111111111111111111; // -1  è¡¥ç 
+		long l = 0B10000000; //128 è¡¥ç 
 		System.out.println(b);
 		System.out.println(s);
 		System.out.println(i);

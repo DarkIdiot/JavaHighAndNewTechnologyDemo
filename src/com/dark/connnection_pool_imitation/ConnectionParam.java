@@ -5,18 +5,18 @@ import java.io.Serializable;
 /**
  * @author idiot
  * @version 1.0
- * @date 2016Äê1ÔÂ28ÈÕ ÉÏÎç10:01:51
+ * @date 2016å¹´1æœˆ28æ—¥ ä¸Šåˆ10:01:51
  */
 @SuppressWarnings("serial")
 public class ConnectionParam implements Serializable {
-	private String driver; 			// Êı¾İ¿âÇı¶¯³ÌĞò
-	private String url; 			// Êı¾İÁ¬½ÓµÄURL
-	private String user; 			// Êı¾İ¿âÓÃ»§Ãû
-	private String password; 		// Êı¾İ¿âÃÜÂë
-	private int minConnection = 0; 	// ³õÊ¼»¯Á¬½ÓÊı
-	private int maxConnection = 50; // ×î´óÁ¬½ÓÊı
-	private long timeoutValue = 600000;// Á¬½ÓµÄ×î´ó¿ÕÏĞÊ±¼ä
-	private long waitTime = 30000; 	// È¡Á¬½ÓµÄÊ±ºòÈç¹ûÃ»ÓĞ¿ÉÓÃÁ¬½Ó×î´óµÄµÈ´ıÊ±¼ä
+	private String driver; 			// æ•°æ®åº“é©±åŠ¨ç¨‹åº
+	private String url; 			// æ•°æ®è¿æ¥çš„URL
+	private String user; 			// æ•°æ®åº“ç”¨æˆ·å
+	private String password; 		// æ•°æ®åº“å¯†ç 
+	private int minConnection = 0; 	// åˆå§‹åŒ–è¿æ¥æ•°
+	private int maxConnection = 50; // æœ€å¤§è¿æ¥æ•°
+	private long timeoutValue = 600000;// è¿æ¥çš„æœ€å¤§ç©ºé—²æ—¶é—´
+	private long waitTime = 30000; 	// å–è¿æ¥çš„æ—¶å€™å¦‚æœæ²¡æœ‰å¯ç”¨è¿æ¥æœ€å¤§çš„ç­‰å¾…æ—¶é—´
 
 	public ConnectionParam(String driver, String url, String user,
 			String password) {

@@ -7,23 +7,23 @@ import javax.naming.NameNotFoundException;
 import javax.sql.DataSource;
 
 /**
- * Á¬½Ó³ØÀà³§£¬¸ÃÀà³£ÓÃÀ´±£´æ¶à¸öÊı¾İÔ´Ãû³ÆºÏÊı¾İ¿âÁ¬½Ó³Ø¶ÔÓ¦µÄ¹şÏ£
+ * è¿æ¥æ± ç±»å‚ï¼Œè¯¥ç±»å¸¸ç”¨æ¥ä¿å­˜å¤šä¸ªæ•°æ®æºåç§°åˆæ•°æ®åº“è¿æ¥æ± å¯¹åº”çš„å“ˆå¸Œ
  * @author idiot
  * @version 1.0
- * @date 2016Äê1ÔÂ28ÈÕ ÉÏÎç10:04:41
+ * @date 2016å¹´1æœˆ28æ—¥ ä¸Šåˆ10:04:41
  */
 public class ConnectionFactory
 {
-    //¸Ã¹şÏ£±íÓÃÀ´±£´æÊı¾İÔ´ÃûºÍÁ¬½Ó³Ø¶ÔÏóµÄ¹ØÏµ±í
+    //è¯¥å“ˆå¸Œè¡¨ç”¨æ¥ä¿å­˜æ•°æ®æºåå’Œè¿æ¥æ± å¯¹è±¡çš„å…³ç³»è¡¨
     static Hashtable connectionPools = null;
     static{
         connectionPools = new Hashtable(2,0.75F);
     } 
     /**
-     * ´ÓÁ¬½Ó³Ø¹¤³§ÖĞ»ñÈ¡Ö¸¶¨Ãû³Æ¶ÔÓ¦µÄÁ¬½Ó³Ø¶ÔÏó
-     * @param name    Á¬½Ó³Ø¶ÔÏó¶ÔÓ¦µÄÃû³Æ
-     * @return DataSource   ·µ»ØÃû³Æ¶ÔÓ¦µÄÁ¬½Ó³Ø¶ÔÏó
-     * @throws NameNotFoundException    ÎŞ·¨ÕÒµ½Ö¸¶¨µÄÁ¬½Ó³Ø
+     * ä»è¿æ¥æ± å·¥å‚ä¸­è·å–æŒ‡å®šåç§°å¯¹åº”çš„è¿æ¥æ± å¯¹è±¡
+     * @param name    è¿æ¥æ± å¯¹è±¡å¯¹åº”çš„åç§°
+     * @return DataSource   è¿”å›åç§°å¯¹åº”çš„è¿æ¥æ± å¯¹è±¡
+     * @throws NameNotFoundException    æ— æ³•æ‰¾åˆ°æŒ‡å®šçš„è¿æ¥æ± 
      */
     public static DataSource lookup(String name) 
         throws NameNotFoundException
@@ -35,15 +35,15 @@ public class ConnectionFactory
         return (DataSource)ds;
     }
     /**
-     * ½«Ö¸¶¨µÄÃû×ÖºÍÊı¾İ¿âÁ¬½ÓÅäÖÃ°ó¶¨ÔÚÒ»Æğ²¢³õÊ¼»¯Êı¾İ¿âÁ¬½Ó³Ø
-     * @param name      ¶ÔÓ¦Á¬½Ó³ØµÄÃû³Æ
-     * @param param Á¬½Ó³ØµÄÅäÖÃ²ÎÊı£¬¾ßÌåÇë¼ûÀàConnectionParam
-     * @return DataSource   Èç¹û°ó¶¨³É¹¦ºó·µ»ØÁ¬½Ó³Ø¶ÔÏó
-     * @throws NameAlreadyBoundException    Ò»¶¨Ãû×ÖnameÒÑ¾­°ó¶¨ÔòÅ×³ö¸ÃÒì³£
-     * @throws ClassNotFoundException       ÎŞ·¨ÕÒµ½Á¬½Ó³ØµÄÅäÖÃÖĞµÄÇı¶¯³ÌĞòÀà
-     * @throws IllegalAccessException       Á¬½Ó³ØÅäÖÃÖĞµÄÇı¶¯³ÌĞòÀàÓĞÎó
-     * @throws InstantiationException       ÎŞ·¨ÊµÀı»¯Çı¶¯³ÌĞòÀà
-     * @throws SQLException             ÎŞ·¨Õı³£Á¬½ÓÖ¸¶¨µÄÊı¾İ¿â
+     * å°†æŒ‡å®šçš„åå­—å’Œæ•°æ®åº“è¿æ¥é…ç½®ç»‘å®šåœ¨ä¸€èµ·å¹¶åˆå§‹åŒ–æ•°æ®åº“è¿æ¥æ± 
+     * @param name      å¯¹åº”è¿æ¥æ± çš„åç§°
+     * @param param è¿æ¥æ± çš„é…ç½®å‚æ•°ï¼Œå…·ä½“è¯·è§ç±»ConnectionParam
+     * @return DataSource   å¦‚æœç»‘å®šæˆåŠŸåè¿”å›è¿æ¥æ± å¯¹è±¡
+     * @throws NameAlreadyBoundException    ä¸€å®šåå­—nameå·²ç»ç»‘å®šåˆ™æŠ›å‡ºè¯¥å¼‚å¸¸
+     * @throws ClassNotFoundException       æ— æ³•æ‰¾åˆ°è¿æ¥æ± çš„é…ç½®ä¸­çš„é©±åŠ¨ç¨‹åºç±»
+     * @throws IllegalAccessException       è¿æ¥æ± é…ç½®ä¸­çš„é©±åŠ¨ç¨‹åºç±»æœ‰è¯¯
+     * @throws InstantiationException       æ— æ³•å®ä¾‹åŒ–é©±åŠ¨ç¨‹åºç±»
+     * @throws SQLException             æ— æ³•æ­£å¸¸è¿æ¥æŒ‡å®šçš„æ•°æ®åº“
      */
     public static DataSource bind(String name, ConnectionParam param)
         throws NameAlreadyBoundException,ClassNotFoundException,
@@ -60,15 +60,15 @@ public class ConnectionFactory
         return source;
     }
     /**
-     * ÖØĞÂ°ó¶¨Êı¾İ¿âÁ¬½Ó³Ø
-     * @param name      ¶ÔÓ¦Á¬½Ó³ØµÄÃû³Æ
-     * @param param Á¬½Ó³ØµÄÅäÖÃ²ÎÊı£¬¾ßÌåÇë¼ûÀàConnectionParam
-     * @return DataSource   Èç¹û°ó¶¨³É¹¦ºó·µ»ØÁ¬½Ó³Ø¶ÔÏó
-     * @throws NameAlreadyBoundException    Ò»¶¨Ãû×ÖnameÒÑ¾­°ó¶¨ÔòÅ×³ö¸ÃÒì³£
-     * @throws ClassNotFoundException       ÎŞ·¨ÕÒµ½Á¬½Ó³ØµÄÅäÖÃÖĞµÄÇı¶¯³ÌĞòÀà
-     * @throws IllegalAccessException       Á¬½Ó³ØÅäÖÃÖĞµÄÇı¶¯³ÌĞòÀàÓĞÎó
-     * @throws InstantiationException       ÎŞ·¨ÊµÀı»¯Çı¶¯³ÌĞòÀà
-     * @throws SQLException             ÎŞ·¨Õı³£Á¬½ÓÖ¸¶¨µÄÊı¾İ¿â
+     * é‡æ–°ç»‘å®šæ•°æ®åº“è¿æ¥æ± 
+     * @param name      å¯¹åº”è¿æ¥æ± çš„åç§°
+     * @param param è¿æ¥æ± çš„é…ç½®å‚æ•°ï¼Œå…·ä½“è¯·è§ç±»ConnectionParam
+     * @return DataSource   å¦‚æœç»‘å®šæˆåŠŸåè¿”å›è¿æ¥æ± å¯¹è±¡
+     * @throws NameAlreadyBoundException    ä¸€å®šåå­—nameå·²ç»ç»‘å®šåˆ™æŠ›å‡ºè¯¥å¼‚å¸¸
+     * @throws ClassNotFoundException       æ— æ³•æ‰¾åˆ°è¿æ¥æ± çš„é…ç½®ä¸­çš„é©±åŠ¨ç¨‹åºç±»
+     * @throws IllegalAccessException       è¿æ¥æ± é…ç½®ä¸­çš„é©±åŠ¨ç¨‹åºç±»æœ‰è¯¯
+     * @throws InstantiationException       æ— æ³•å®ä¾‹åŒ–é©±åŠ¨ç¨‹åºç±»
+     * @throws SQLException             æ— æ³•æ­£å¸¸è¿æ¥æŒ‡å®šçš„æ•°æ®åº“
      */
     public static DataSource rebind(String name, ConnectionParam param)
         throws NameAlreadyBoundException,ClassNotFoundException,
@@ -82,7 +82,7 @@ public class ConnectionFactory
         return bind(name, param);
     }
     /**
-     * É¾³ıÒ»¸öÊı¾İ¿âÁ¬½Ó³Ø¶ÔÏó
+     * åˆ é™¤ä¸€ä¸ªæ•°æ®åº“è¿æ¥æ± å¯¹è±¡
      * @param name
      * @throws NameNotFoundException
      */

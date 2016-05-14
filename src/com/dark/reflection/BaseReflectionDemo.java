@@ -9,14 +9,14 @@ import java.lang.reflect.Method;
 /**
  * @author idiot
  * @version 1.0
- * @date 2016Äê2ÔÂ17ÈÕ ÏÂÎç7:56:19
+ * @date 2016å¹´2æœˆ17æ—¥ ä¸‹åˆ7:56:19
  */
 public class BaseReflectionDemo {
 	/*
-	 *	getDeclaredXXX(...) »ñÈ¡ÉùÃ÷µÄÓÉ´«Èë²ÎÊıÈ·¶¨µÄXXX(°üº¬private,protected,default)
-	 *	getDeclaredXXXs() »ñÈ¡ÉùÃ÷µÄËùÓĞµÄXXX(°üº¬private,protected,default)
-	 *	getXXX(...)	»ñÈ¡ÓÉ´«Èë²ÎÊıÈ·¶¨µÄXXX(½ö°üº¬public)
-	 *	getXXXs() »ñÈ¡ËùÓĞµÄXXX(½ö°üº¬public)
+	 *	getDeclaredXXX(...) è·å–å£°æ˜çš„ç”±ä¼ å…¥å‚æ•°ç¡®å®šçš„XXX(åŒ…å«private,protected,default)
+	 *	getDeclaredXXXs() è·å–å£°æ˜çš„æ‰€æœ‰çš„XXX(åŒ…å«private,protected,default)
+	 *	getXXX(...)	è·å–ç”±ä¼ å…¥å‚æ•°ç¡®å®šçš„XXX(ä»…åŒ…å«public)
+	 *	getXXXs() è·å–æ‰€æœ‰çš„XXX(ä»…åŒ…å«public)
 	 */
 
 	/**
@@ -64,13 +64,13 @@ public class BaseReflectionDemo {
 				if (!isAccessible) {
 					field.setAccessible(true);
 				}
-				//»ñÈ¡fieldÖµµÄÊ±ºòĞèÒªÅĞ¶ÏÊÇ·ñ¿É¼û¡£
+				//è·å–fieldå€¼çš„æ—¶å€™éœ€è¦åˆ¤æ–­æ˜¯å¦å¯è§ã€‚
 				System.out.println(field.getName()+" : "+field.get(stu));
 				
 				field.set(stu, field.get(stu)+"$proxy123");
 				
 				System.out.println("Modified Field -> "+field.getName()+" : "+field.get(stu));
-				field.setAccessible(isAccessible); //»¹Ô­·ÃÎÊÈ¨ÏŞ¡£
+				field.setAccessible(isAccessible); //è¿˜åŸè®¿é—®æƒé™ã€‚
 			}
 		} catch (ClassNotFoundException | InstantiationException
 				| IllegalAccessException | SecurityException

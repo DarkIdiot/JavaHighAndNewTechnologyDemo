@@ -14,7 +14,7 @@ import javax.sql.DataSource;
 /**
  * @author idiot
  * @version 1.0
- * @date 2016Äê1ÔÂ28ÈÕ ÉÏÎç11:03:58
+ * @date 2016å¹´1æœˆ28æ—¥ ä¸Šåˆ11:03:58
  */
 public class DataSourceImpl implements DataSource {
 
@@ -45,16 +45,16 @@ public class DataSourceImpl implements DataSource {
 	public Connection getConnection(String user, String password) throws SQLException {
 		Connection conn = getFreeConnection(0);
 		if (conn == null) {
-			// ÅĞ¶ÏÊÇ·ñ³¬¹ı×î´óÁ¬½ÓÊı,Èç¹û³¬¹ı×î´óÁ¬½ÓÊı
-			// ÔòµÈ´ıÒ»¶¨Ê±¼ä²é¿´ÊÇ·ñÓĞ¿ÕÏĞÁ¬½Ó,·ñÔòÅ×³öÒì³£¸æËßÓÃ»§ÎŞ¿ÉÓÃÁ¬½Ó
+			// åˆ¤æ–­æ˜¯å¦è¶…è¿‡æœ€å¤§è¿æ¥æ•°,å¦‚æœè¶…è¿‡æœ€å¤§è¿æ¥æ•°
+			// åˆ™ç­‰å¾…ä¸€å®šæ—¶é—´æŸ¥çœ‹æ˜¯å¦æœ‰ç©ºé—²è¿æ¥,å¦åˆ™æŠ›å‡ºå¼‚å¸¸å‘Šè¯‰ç”¨æˆ·æ— å¯ç”¨è¿æ¥
 			if (getConnectionCount() >= connParam.getMaxConnection())
 				conn = getFreeConnection(connParam.getWaitTime());
-			else {// Ã»ÓĞ³¬¹ıÁ¬½ÓÊı£¬ÖØĞÂ»ñÈ¡Ò»¸öÊı¾İ¿âµÄÁ¬½Ó
+			else {// æ²¡æœ‰è¶…è¿‡è¿æ¥æ•°ï¼Œé‡æ–°è·å–ä¸€ä¸ªæ•°æ®åº“çš„è¿æ¥
 				connParam.setUser(user);
 				connParam.setPassword(password);
 				Connection conn2 = DriverManager.getConnection(
 						connParam.getUrl(), user, password);
-				// ´úÀí½«Òª·µ»ØµÄÁ¬½Ó¶ÔÏó
+				// ä»£ç†å°†è¦è¿”å›çš„è¿æ¥å¯¹è±¡
 				_Connection _conn = new _Connection(conn2, true);
 				conns.add(_conn);
 				conn = _conn.getConnection();
@@ -75,7 +75,7 @@ public class DataSourceImpl implements DataSource {
 			}
 		}
 		if (conn == null && nTimeout > 0) {
-			// µÈ´ınTimeoutºÁÃëÒÔ±ã¿´ÊÇ·ñÓĞ¿ÕÏĞÁ¬½Ó
+			// ç­‰å¾…nTimeoutæ¯«ç§’ä»¥ä¾¿çœ‹æ˜¯å¦æœ‰ç©ºé—²è¿æ¥
 				try {
 					Thread.sleep(nTimeout);
 				} catch (InterruptedException e) {
@@ -83,15 +83,15 @@ public class DataSourceImpl implements DataSource {
 				}
 			conn = getFreeConnection(0);
 			if (conn == null)
-				throw new SQLException("Ã»ÓĞ¿ÉÓÃµÄÊı¾İ¿âÁ¬½Ó");
+				throw new SQLException("æ²¡æœ‰å¯ç”¨çš„æ•°æ®åº“è¿æ¥");
 		}
 		return conn;
 	}
 
 	/**
-	 * ¹Ø±Õ¸ÃÁ¬½Ó³ØÖĞµÄËùÓĞÊı¾İ¿âÁ¬½Ó
+	 * å…³é—­è¯¥è¿æ¥æ± ä¸­çš„æ‰€æœ‰æ•°æ®åº“è¿æ¥
 	 * 
-	 * @return int ·µ»Ø±»¹Ø±ÕÁ¬½ÓµÄ¸öÊı
+	 * @return int è¿”å›è¢«å…³é—­è¿æ¥çš„ä¸ªæ•°
 	 * @throws SQLException
 	 */
 	public int close() throws SQLException {

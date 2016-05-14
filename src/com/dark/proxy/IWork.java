@@ -3,7 +3,7 @@ package com.dark.proxy;
 /**
  * @author idiot
  * @version 1.0
- * @date 2016Äê1ÔÂ27ÈÕ ÏÂÎç8:48:14
+ * @date 2016å¹´1æœˆ27æ—¥ ä¸‹åˆ8:48:14
  */
 public interface IWork {
 	public void doWork(String name) throws Exception;

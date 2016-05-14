@@ -6,7 +6,7 @@ import java.util.logging.Logger;
 /**
  * @author idiot
  * @version 1.0
- * @date 2016Äê1ÔÂ27ÈÕ ÏÂÎç9:02:54
+ * @date 2016å¹´1æœˆ27æ—¥ ä¸‹åˆ9:02:54
  */
 public class StaticProxyDemo {
 	public static void main(String[] args) {
@@ -16,11 +16,11 @@ public class StaticProxyDemo {
 	}
 }
 /**
- * ´úÀíÀà
+ * ä»£ç†ç±»
  */
 class WorkProxy{
 	/**
-	 * ×éºÏ¹ØÏµ£¬±»´úÀíÀàµÄÒıÓÃ
+	 * ç»„åˆå…³ç³»ï¼Œè¢«ä»£ç†ç±»çš„å¼•ç”¨
 	 */
 	private IWork work;
 	private Logger log = Logger.getLogger(this.getClass().getName());

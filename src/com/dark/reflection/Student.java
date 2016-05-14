@@ -5,7 +5,7 @@ package com.dark.reflection;
  * Reflect Test Class
  * @author idiot
  * @version 1.0
- * @date 2016Äê2ÔÂ4ÈÕ ÏÂÎç10:46:20
+ * @date 2016å¹´2æœˆ4æ—¥ ä¸‹åˆ10:46:20
  */
 public class Student {
 	private String name;

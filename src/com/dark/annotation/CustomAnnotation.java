@@ -10,23 +10,23 @@ import java.lang.annotation.Target;
 /**
  * @author idiot
  * @version 1.0
- * @date 2016Äê2ÔÂ18ÈÕ ÉÏÎç12:13:52
+ * @date 2016å¹´2æœˆ18æ—¥ ä¸Šåˆ12:13:52
  */
-//@RetentionµÄÄ¬ÈÏÖµÊÇRetentionPolicy.CLASS,±àÒëÆ÷»á°Ñ×¢½â¼ÇÂ¼ÔÚclassÎÄ¼şÖĞ,µ±ÔËĞĞjava³ÌĞòÊ±£¬jvm²¢²»»á±£Áô×¢½â¡£
-//RetentionPolicy.RUNTIME,±àÒëÆ÷»á°Ñ×¢½â¼ÇÂ¼ÔÚclassÎÄ¼şÖĞ,µ±ÔËĞĞjava³ÌĞòÊ±£¬jvm»á±£Áô×¢½â£¬³ÌĞò¿ÉÒÔÍ¨¹ı·´Éä»ñÈ¡¸Ã×¢½â¡£
+//@Retentionçš„é»˜è®¤å€¼æ˜¯RetentionPolicy.CLASS,ç¼–è¯‘å™¨ä¼šæŠŠæ³¨è§£è®°å½•åœ¨classæ–‡ä»¶ä¸­,å½“è¿è¡Œjavaç¨‹åºæ—¶ï¼Œjvmå¹¶ä¸ä¼šä¿ç•™æ³¨è§£ã€‚
+//RetentionPolicy.RUNTIME,ç¼–è¯‘å™¨ä¼šæŠŠæ³¨è§£è®°å½•åœ¨classæ–‡ä»¶ä¸­,å½“è¿è¡Œjavaç¨‹åºæ—¶ï¼Œjvmä¼šä¿ç•™æ³¨è§£ï¼Œç¨‹åºå¯ä»¥é€šè¿‡åå°„è·å–è¯¥æ³¨è§£ã€‚
 @Retention(RetentionPolicy.RUNTIME)  
-//ElementType.TYPE Ó¦ÓÃÓÚÀà¡¢½Ó¿Ú¡¢»òÃ¶¾ÙÉùÃ÷  ElementType.ANNOTATION_TYPE  Ó¦ÓÃÓÚ×¢ÊÍÀàĞÍÉùÃ÷   ElementType.CONSTRUCTOR Ó¦ÓÃÓÚ¹¹Ôì·½·¨ÉùÃ÷
-//ElementType.FIELD Ó¦ÓÃÓÚ×Ö¶ÎÉùÃ÷(°üÀ¨Ã¶¾Ù³£Á¿)  ElementType.LOCAL_VARIABLE Ó¦ÓÃÓÚ¾Ö²¿±äÁ¿ÉùÃ÷   ElementType.METHOD Ó¦ÓÃÓÚ·½·¨ÉùÃ÷
-//ElementType.PACKAGE Ó¦ÓÃÓÚ°üÉùÃ÷   ElementType.PARAMETER Ó¦ÓÃÓÚ²ÎÊıÉùÃ÷   ElementType.TYPE_PARAMETER
+//ElementType.TYPE åº”ç”¨äºç±»ã€æ¥å£ã€æˆ–æšä¸¾å£°æ˜  ElementType.ANNOTATION_TYPE  åº”ç”¨äºæ³¨é‡Šç±»å‹å£°æ˜   ElementType.CONSTRUCTOR åº”ç”¨äºæ„é€ æ–¹æ³•å£°æ˜
+//ElementType.FIELD åº”ç”¨äºå­—æ®µå£°æ˜(åŒ…æ‹¬æšä¸¾å¸¸é‡)  ElementType.LOCAL_VARIABLE åº”ç”¨äºå±€éƒ¨å˜é‡å£°æ˜   ElementType.METHOD åº”ç”¨äºæ–¹æ³•å£°æ˜
+//ElementType.PACKAGE åº”ç”¨äºåŒ…å£°æ˜   ElementType.PARAMETER åº”ç”¨äºå‚æ•°å£°æ˜   ElementType.TYPE_PARAMETER
 @Target({ElementType.TYPE})
-//±»ËüĞŞÊÎµÄAnnotation½«¾ßÓĞ¼Ì³ĞĞÔ£¬Èç¹ûÄ³¸öÀàÊ¹ÓÃÁË±»@InheritedĞŞÊÎAnnotation£¬ÔòÆä×ÓÀà½«×Ô¶¯¾ßÓĞ¸Ã×¢½â¡£
+//è¢«å®ƒä¿®é¥°çš„Annotationå°†å…·æœ‰ç»§æ‰¿æ€§ï¼Œå¦‚æœæŸä¸ªç±»ä½¿ç”¨äº†è¢«@Inheritedä¿®é¥°Annotationï¼Œåˆ™å…¶å­ç±»å°†è‡ªåŠ¨å…·æœ‰è¯¥æ³¨è§£ã€‚
 @Inherited
-//ÓÃÓÚÖ¸¶¨±»¸ÃÔªAnnotationĞŞÊÎµÄAnnotationÀà½«±»javadoc¹¤¾ßÌáÈ¡³ÉÎÄµµ¡£
-// Èç¹û¶¨ÒåAnnotationÀàÊ±Ê¹ÓÃÁË@DocumentedĞŞÊÎ, ÔòËùÓĞÊ¹ÓÃ¸ÃAnnotationĞŞÊÎµÄ³ÌĞòÔªËØµÄAPIÎÄµµÖĞ½«»ò°üº¬¸ÃAnnotationËµÃ÷. 
+//ç”¨äºæŒ‡å®šè¢«è¯¥å…ƒAnnotationä¿®é¥°çš„Annotationç±»å°†è¢«javadocå·¥å…·æå–æˆæ–‡æ¡£ã€‚
+// å¦‚æœå®šä¹‰Annotationç±»æ—¶ä½¿ç”¨äº†@Documentedä¿®é¥°, åˆ™æ‰€æœ‰ä½¿ç”¨è¯¥Annotationä¿®é¥°çš„ç¨‹åºå…ƒç´ çš„APIæ–‡æ¡£ä¸­å°†æˆ–åŒ…å«è¯¥Annotationè¯´æ˜. 
 @Documented
 public @interface CustomAnnotation {
 	/**
-	 * ÀàĞÍÖ»ÄÜÊÇString,Annotation,enumeration,primitive type.
+	 * ç±»å‹åªèƒ½æ˜¯String,Annotation,enumeration,primitive type.
 	 */
 	String name() default "darkidiot";
 	

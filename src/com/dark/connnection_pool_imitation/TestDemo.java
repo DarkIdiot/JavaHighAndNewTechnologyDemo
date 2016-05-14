@@ -10,7 +10,7 @@ import javax.sql.DataSource;
 /**
  * @author idiot
  * @version 1.0
- * @date 2016Äê1ÔÂ28ÈÕ ÉÏÎç10:57:48
+ * @date 2016å¹´1æœˆ28æ—¥ ä¸Šåˆ10:57:48
  */
 public class TestDemo {
 	public static void main(String[] args) {
@@ -29,8 +29,8 @@ public class TestDemo {
 			e1.printStackTrace();
 		}
 		System.out.println("bind datasource ok.");
-		//ÒÔÉÏ´úÂëÊÇÓÃÀ´µÇ¼ÇÒ»¸öÁ¬½Ó³Ø¶ÔÏó£¬¸Ã²Ù×÷¿ÉÒÔÔÚ³ÌĞò³õÊ¼»¯Ö»×öÒ»´Î¼´¿É
-		//ÒÔÏÂ¿ªÊ¼¾ÍÊÇÊ¹ÓÃÕßÕæÕıĞèÒªĞ´µÄ´úÂë
+		//ä»¥ä¸Šä»£ç æ˜¯ç”¨æ¥ç™»è®°ä¸€ä¸ªè¿æ¥æ± å¯¹è±¡ï¼Œè¯¥æ“ä½œå¯ä»¥åœ¨ç¨‹åºåˆå§‹åŒ–åªåšä¸€æ¬¡å³å¯
+		//ä»¥ä¸‹å¼€å§‹å°±æ˜¯ä½¿ç”¨è€…çœŸæ­£éœ€è¦å†™çš„ä»£ç 
 		DataSource ds = null;
 		try {
 			ds = ConnectionFactory.lookup(name);

@@ -6,25 +6,25 @@ import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
 
 /**
- * ÈÕÖ¾µÄ´æ´¢£¬×ª·¢¡£
+ * æ—¥å¿—çš„å­˜å‚¨ï¼Œè½¬å‘ã€‚
  * 
  * @author idiot
  * @version 1.0
- * @date 2016Äê2ÔÂ4ÈÕ ÏÂÎç9:11:49
+ * @date 2016å¹´2æœˆ4æ—¥ ä¸‹åˆ9:11:49
  */
 public class LogHandler {
 	private Logger log = Logger.getLogger(this.getClass().getName());
 
 	public LogHandler() {
-		// ÉèÖÃÈÕÖ¾Êä³öµÄhandler
+		// è®¾ç½®æ—¥å¿—è¾“å‡ºçš„handler
 		/**
-		 * ³£¼ûµÄÈÕÖ¾Êä³öÓĞ3ÖÖhandler {@link FileHandler}¡¢{@link java.util.logging.ConsoleHandler}¡¢{@link java.util.logging.SocketHandler}
+		 * å¸¸è§çš„æ—¥å¿—è¾“å‡ºæœ‰3ç§handler {@link FileHandler}ã€{@link java.util.logging.ConsoleHandler}ã€{@link java.util.logging.SocketHandler}
 		 */
 		try {
 			FileHandler fileHandler = new FileHandler("log.log", true);
-			//ÉèÖÃÊä³ö¸ñÊ½
+			//è®¾ç½®è¾“å‡ºæ ¼å¼
 			/**
-			 * ³£¼ûµÄ¸ñÊ½ÓĞ2ÖĞFormatter {@link SimpleFormatter}¡¢{@link XMLFormatter}
+			 * å¸¸è§çš„æ ¼å¼æœ‰2ä¸­Formatter {@link SimpleFormatter}ã€{@link XMLFormatter}
 			 */
 			fileHandler.setFormatter(new SimpleFormatter());
 			log.addHandler(fileHandler);
@@ -34,7 +34,7 @@ public class LogHandler {
 	}
 	
 	public void LoggerHandlerDemo() {
-		// µ±Ç°ÈÕÖ¾µÄ¼¶±ğÄ¬ÈÏÎªINFO
+		// å½“å‰æ—¥å¿—çš„çº§åˆ«é»˜è®¤ä¸ºINFO
 		log.severe("Logger sever ");
 		log.warning("Logger warning ");
 		log.info("Logger info ");

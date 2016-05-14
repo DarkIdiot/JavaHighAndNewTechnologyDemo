@@ -36,7 +36,7 @@ public class MultiPortEcho
     }
 
     while (true) {
-      int num = selector.select(); //¼àÌıËùÓĞ±»×¢²áµÄ¶Ë¿Ú£¬²¢Ñ¡ÔñÍ¨µÀ¡£Èç¹ûËùÓĞ¶Ë¿Ú¶¼Ã»ÓĞ½¨Á¢Á¬½ÓµÄÇëÇó£¬²Å»á·¢Éú×èÈû¡£
+      int num = selector.select(); //ç›‘å¬æ‰€æœ‰è¢«æ³¨å†Œçš„ç«¯å£ï¼Œå¹¶é€‰æ‹©é€šé“ã€‚å¦‚æœæ‰€æœ‰ç«¯å£éƒ½æ²¡æœ‰å»ºç«‹è¿æ¥çš„è¯·æ±‚ï¼Œæ‰ä¼šå‘ç”Ÿé˜»å¡ã€‚
 
       Set selectedKeys = selector.selectedKeys();
       Iterator it = selectedKeys.iterator();

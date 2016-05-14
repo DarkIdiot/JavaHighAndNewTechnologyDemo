@@ -4,19 +4,19 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- * JDK×Ô´øÈÕÖ¾µÄ¼¶±ğDEMO
+ * JDKè‡ªå¸¦æ—¥å¿—çš„çº§åˆ«DEMO
  * @author idiot
  * @version 1.0
- * @date 2016Äê2ÔÂ4ÈÕ ÏÂÎç8:51:08
+ * @date 2016å¹´2æœˆ4æ—¥ ä¸‹åˆ8:51:08
  */
 public class LogLevelDemo {
 	private Logger log = Logger.getLogger(this.getClass().getName());
 	/*
-	 * loggerµÄÄ¬ÈÏ¼¶±ğÊÇINFO£¬±ÈINFO¸üµÍµÄÈÕÖ¾½«²»»áÏÔÊ¾¡£
-	 * LoggerµÄÄ¬ÈÏ¼¶±ğ¶¨ÒåÊÇÔÚjre/lib/logging.propertiesÎÄ¼şÀïÃæ:java.util.logging.ConsoleHandler.level = INFO; 
+	 * loggerçš„é»˜è®¤çº§åˆ«æ˜¯INFOï¼Œæ¯”INFOæ›´ä½çš„æ—¥å¿—å°†ä¸ä¼šæ˜¾ç¤ºã€‚
+	 * Loggerçš„é»˜è®¤çº§åˆ«å®šä¹‰æ˜¯åœ¨jre/lib/logging.propertiesæ–‡ä»¶é‡Œé¢:java.util.logging.ConsoleHandler.level = INFO; 
 	 */
 	public void LoggerLevelDemo(){
-		//µ±Ç°ÈÕÖ¾µÄ¼¶±ğÄ¬ÈÏÎªINFO
+		//å½“å‰æ—¥å¿—çš„çº§åˆ«é»˜è®¤ä¸ºINFO
 		log.severe("Logger sever ");
 		log.warning("Logger warning ");
 		log.info("Logger info ");

@@ -9,15 +9,15 @@ import java.sql.SQLException;
 /**
  * @author idiot
  * @version 1.0
- * @date 2016Äê1ÔÂ28ÈÕ ÉÏÎç11:06:46
+ * @date 2016å¹´1æœˆ28æ—¥ ä¸Šåˆ11:06:46
  */
 public class _Connection implements InvocationHandler {
 
 	 private final static String CLOSE_METHOD_NAME = "close";
 	    private Connection conn = null;
-	    //Êı¾İ¿âµÄÃ¦×´Ì¬
+	    //æ•°æ®åº“çš„å¿™çŠ¶æ€
 	    private boolean inUse = false;
-	    //ÓÃ»§×îºóÒ»´Î·ÃÎÊ¸ÃÁ¬½Ó·½·¨µÄÊ±¼ä
+	    //ç”¨æˆ·æœ€åä¸€æ¬¡è®¿é—®è¯¥è¿æ¥æ–¹æ³•çš„æ—¶é—´
 	    private long lastAccessTime;
 	     
 	    _Connection(Connection conn, boolean inUse){
@@ -30,18 +30,18 @@ public class _Connection implements InvocationHandler {
 	     * @return Connection
 	     */
 	    public Connection getConnection() {
-	        //·µ»ØÊı¾İ¿âÁ¬½ÓconnµÄ½Ó¹ÜÀà£¬ÒÔ±ã½Ø×¡close·½·¨
+	        //è¿”å›æ•°æ®åº“è¿æ¥connçš„æ¥ç®¡ç±»ï¼Œä»¥ä¾¿æˆªä½closeæ–¹æ³•
 	        Connection connProxy = (Connection)Proxy.newProxyInstance(
 	            conn.getClass().getClassLoader(),
 	            conn.getClass().getInterfaces(),this);
 	        return connProxy;
 	    }
 	    /**
-	     * ¸Ã·½·¨ÕæÕıµÄ¹Ø±ÕÁËÊı¾İ¿âµÄÁ¬½Ó
+	     * è¯¥æ–¹æ³•çœŸæ­£çš„å…³é—­äº†æ•°æ®åº“çš„è¿æ¥
 	     * @throws SQLException
 	     */
 	    void close() throws SQLException{
-	        //ÓÉÓÚÀàÊôĞÔconnÊÇÃ»ÓĞ±»½Ó¹ÜµÄÁ¬½Ó£¬Òò´ËÒ»µ©µ÷ÓÃclose·½·¨ºó¾ÍÖ±½Ó¹Ø±ÕÁ¬½Ó
+	        //ç”±äºç±»å±æ€§connæ˜¯æ²¡æœ‰è¢«æ¥ç®¡çš„è¿æ¥ï¼Œå› æ­¤ä¸€æ—¦è°ƒç”¨closeæ–¹æ³•åå°±ç›´æ¥å…³é—­è¿æ¥
 	        conn.close();
 	    }
 	    /**
@@ -58,7 +58,7 @@ public class _Connection implements InvocationHandler {
 	        throws Throwable 
 	    {
 	        Object obj = null;
-	        //ÅĞ¶ÏÊÇ·ñµ÷ÓÃÁËcloseµÄ·½·¨£¬Èç¹ûµ÷ÓÃclose·½·¨Ôò°ÑÁ¬½ÓÖÃÎªÎŞÓÃ×´Ì¬
+	        //åˆ¤æ–­æ˜¯å¦è°ƒç”¨äº†closeçš„æ–¹æ³•ï¼Œå¦‚æœè°ƒç”¨closeæ–¹æ³•åˆ™æŠŠè¿æ¥ç½®ä¸ºæ— ç”¨çŠ¶æ€
 	        if(CLOSE_METHOD_NAME.equals(m.getName()))
 	            {
 	        		setInUse(false);
@@ -66,7 +66,7 @@ public class _Connection implements InvocationHandler {
 	            }        
 	        else
 	            obj = m.invoke(conn, args); 
-	        //ÉèÖÃ×îºóÒ»´Î·ÃÎÊÊ±¼ä£¬ÒÔ±ã¼°Ê±Çå³ı³¬Ê±µÄÁ¬½Ó
+	        //è®¾ç½®æœ€åä¸€æ¬¡è®¿é—®æ—¶é—´ï¼Œä»¥ä¾¿åŠæ—¶æ¸…é™¤è¶…æ—¶çš„è¿æ¥
 	        lastAccessTime = System.currentTimeMillis();
 	        return obj;
 	    }

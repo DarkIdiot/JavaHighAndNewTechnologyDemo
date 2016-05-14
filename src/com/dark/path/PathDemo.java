@@ -7,11 +7,11 @@ import java.io.InputStream;
 /**
  * @author idiot
  * @version 1.0
- * @date 2016Äê2ÔÂ4ÈÕ ÏÂÎç10:29:34
+ * @date 2016å¹´2æœˆ4æ—¥ ä¸‹åˆ10:29:34
  */
 public class PathDemo {
 	/**
-	 * Ïà¶ÔÂ·¾¶
+	 * ç›¸å¯¹è·¯å¾„
 	 */
 	public void relativePathDemo() {
 		InputStream resourceAsStream1 = this.getClass().getResourceAsStream("/");  // ClassPath:
@@ -23,7 +23,7 @@ public class PathDemo {
 	}
 
 	/**
-	 * ¾ø¶ÔÂ·¾¶
+	 * ç»å¯¹è·¯å¾„
 	 */
 	public void absolutelyPathDemo() {
 		try {

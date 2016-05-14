@@ -1,13 +1,13 @@
 package com.dark.jdk7NewCharacteristic;
 
 /**
- * JDK 1.7 ĞÂÔöÌØĞÔ
- * 	Ê¹ÓÃÒ»¸öcatch¿é²¶»ñ¶àÖÖÀàĞÍµÄÒì³£ÊÇÓĞÈçÏÂÁ½¸öĞèÒª×¢ÒâµÄµØ·½¡£
- * 	1.²¶×½¶à¸öÒì³£ÀàĞÍÊ±£¬¶à¸öÒì³£ÀàĞÍÖ®¼äÓÃ'»ò'(|)Á¬½Ó;
- *  2.²¶×½¶à¸öÀàĞÍÒì³£Ê±£¬Òì³£±äÁ¿ÓĞÒşÊ¾µÄfinalĞŞÊÎ£¬Òò´Ë³ÌĞò²»ÄÜ¶Ô¸ÃÒì³£±äÁ¿ÖØĞÂ¸³Öµ;
+ * JDK 1.7 æ–°å¢ç‰¹æ€§
+ * 	ä½¿ç”¨ä¸€ä¸ªcatchå—æ•è·å¤šç§ç±»å‹çš„å¼‚å¸¸æ˜¯æœ‰å¦‚ä¸‹ä¸¤ä¸ªéœ€è¦æ³¨æ„çš„åœ°æ–¹ã€‚
+ * 	1.æ•æ‰å¤šä¸ªå¼‚å¸¸ç±»å‹æ—¶ï¼Œå¤šä¸ªå¼‚å¸¸ç±»å‹ä¹‹é—´ç”¨'æˆ–'(|)è¿æ¥;
+ *  2.æ•æ‰å¤šä¸ªç±»å‹å¼‚å¸¸æ—¶ï¼Œå¼‚å¸¸å˜é‡æœ‰éšç¤ºçš„finalä¿®é¥°ï¼Œå› æ­¤ç¨‹åºä¸èƒ½å¯¹è¯¥å¼‚å¸¸å˜é‡é‡æ–°èµ‹å€¼;
  * @author idiot
  * @version 1.0
- * @date 2016Äê2ÔÂ4ÈÕ ÉÏÎç11:40:45
+ * @date 2016å¹´2æœˆ4æ—¥ ä¸Šåˆ11:40:45
  */
 public class MultiExceptionDemo {
 	public static void main(String[] args) {
@@ -16,7 +16,7 @@ public class MultiExceptionDemo {
 			int b = Integer.parseInt(args[1]);
 			int c = a / b;
 		} catch (NumberFormatException | IndexOutOfBoundsException | ArithmeticException e) {
-			System.out.println("³ÌĞò·¢ÉúÊı×éÔ½½ç¡¢Êı×Ö¸ñÊ½Òì³£¡¢ËãÊıÒì³£Ö®Ò»¡£");
+			System.out.println("ç¨‹åºå‘ç”Ÿæ•°ç»„è¶Šç•Œã€æ•°å­—æ ¼å¼å¼‚å¸¸ã€ç®—æ•°å¼‚å¸¸ä¹‹ä¸€ã€‚");
 			e.printStackTrace();
 		}
 				

@@ -8,7 +8,7 @@ import java.util.Properties;
 /**
  * @author idiot
  * @version 1.0
- * @date 2016Äê2ÔÂ17ÈÕ ÏÂÎç3:23:19
+ * @date 2016å¹´2æœˆ17æ—¥ ä¸‹åˆ3:23:19
  */
 public class ClassLoaderDemo {
 
