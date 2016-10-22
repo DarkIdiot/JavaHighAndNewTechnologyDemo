@@ -5,3 +5,5 @@ build/    # 忽略 build/ 目录下的所有文件
 bin/    # 忽略 bin/ 目录下的所有文件
 
 lib/    # 忽略 lib/ 目录下的所有文件
+
+target/
