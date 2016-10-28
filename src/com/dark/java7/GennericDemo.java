@@ -1,4 +1,4 @@
-package com.dark.jdk7NewCharacteristic;
+package com.dark.java7;
 
 import java.util.ArrayList;
 import java.util.HashMap;

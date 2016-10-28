@@ -1,4 +1,4 @@
-package com.dark.jdk7NewCharacteristic;
+package com.dark.java7;
 
 /**
  * JDK 1.7 新增特性

@@ -11,12 +11,6 @@ public class Student {
 	private String name;
 	private String sex;
 	
-	private Student(String name) {
-		super();
-		this.name = name;
-		this.sex = "male";
-	}
-
 	public Student() {
 		super();
 		this.name = "default";
