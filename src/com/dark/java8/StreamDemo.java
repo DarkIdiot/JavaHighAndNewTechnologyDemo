@@ -187,7 +187,7 @@ public class StreamDemo {
 	}
 	
 	/**
-	 * Collectors
+	 * main method
 	 */
 	public static void main(String[] args) {
 		System.out.println("====================== create stream Demo ======================");
