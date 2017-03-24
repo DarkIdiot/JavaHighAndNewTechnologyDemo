@@ -1,12 +1,14 @@
 package com.dark.nio;
 
-import java.io.*;
-import java.nio.*;
-import java.nio.channels.*;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.nio.ByteBuffer;
+import java.nio.channels.FileChannel;
 
 public class FastCopyFile
 {
-  static public void main( String args[] ) throws Exception {
+  @SuppressWarnings("resource")
+static public void main( String args[] ) throws Exception {
     if (args.length<2) {
       System.err.println( "Usage: java FastCopyFile infile outfile" );
       System.exit( 1 );

@@ -1,8 +1,8 @@
 package com.dark.nio;
 
-import java.io.*;
-import java.nio.*;
-import java.nio.channels.*;
+import java.io.RandomAccessFile;
+import java.nio.channels.FileChannel;
+import java.nio.channels.FileLock;
 
 public class UseFileLocks
 {

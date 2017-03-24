@@ -1,8 +1,6 @@
 package com.dark.nio;
 
-import java.io.*;
-import java.nio.*;
-import java.nio.channels.*;
+import java.nio.ByteBuffer;
 
 public class CreateArrayBuffer {
 	static public void main(String args[]) throws Exception {

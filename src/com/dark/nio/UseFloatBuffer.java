@@ -1,6 +1,7 @@
 package com.dark.nio;
 
-import java.nio.*;
+
+import java.nio.FloatBuffer;
 
 public class UseFloatBuffer
 {
