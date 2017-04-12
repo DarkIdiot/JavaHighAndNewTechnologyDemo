@@ -5,3 +5,4 @@
 # 忽略 lib/ 目录下的所有文件 
 /lib/
 /target/
+/.settings/

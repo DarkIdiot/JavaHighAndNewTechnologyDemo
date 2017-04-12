@@ -6,7 +6,7 @@ import com.google.common.base.Objects;
 /**
  * @author Darkidiot
  * @version 1.0
- * @date 2016年11月8日
+ * @date 2016骞�11鏈�8鏃�
  */
 public class ObjectDemo {
 	static ObjectDemo demo = new ObjectDemo();
@@ -33,7 +33,7 @@ public class ObjectDemo {
 	}
 	
 	private static void hashCodeDemo(){
-		int hashCode = Objects.hashCode(demo); //会对传入的字段序列计算出合理的、顺序敏感的散列值。
+		int hashCode = Objects.hashCode(demo); //浼氬浼犲叆鐨勫瓧娈靛簭鍒楄绠楀嚭鍚堢悊鐨勩�侀『搴忔晱鎰熺殑鏁ｅ垪鍊笺��
 		print("the hashcode is "+ hashCode);
 	}
 	
