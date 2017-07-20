@@ -6,7 +6,7 @@ import java.net.InetSocketAddress;
 import java.net.NetworkInterface;
 import java.net.SocketAddress;
 import java.net.StandardProtocolFamily;
-import java.net.StandardSocketOption;
+import java.net.StandardSocketOptions;
 import java.nio.ByteBuffer;
 import java.nio.channels.AsynchronousChannelGroup;
 import java.nio.channels.AsynchronousDatagramChannel;
@@ -38,11 +38,11 @@ public class AsynchronousDatagramChannelExample {
         // use the defined channel group or pass in null to use the default channel group
         final AsynchronousDatagramChannel client = AsynchronousDatagramChannel.open(StandardProtocolFamily.INET, tenThreadGroup);
         // enable binding multiple sockets to the same address
-        client.setOption(StandardSocketOption.SO_REUSEADDR, true);
+		client.setOption(StandardSocketOptions.SO_REUSEADDR, true);
         // bind to the port
         client.bind(new InetSocketAddress(port));
         // set the interface for sending datagrams
-        client.setOption(StandardSocketOption.IP_MULTICAST_IF, networkInterface);
+        client.setOption(StandardSocketOptions.IP_MULTICAST_IF, networkInterface);
         
         System.out.println("Joining multicast group " + group + " on network interface " + networkInterface);
         // join the multicast group
