@@ -68,7 +68,7 @@ public class MultiPortEcho {
 					while (true) {
 						echoBuffer.clear();
 
-						int r = sc.read(echoBuffer);
+						int r = sc.read(echoBuffer); 
 
 						if (r <= 0) {
 							break;
