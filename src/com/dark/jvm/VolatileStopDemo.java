@@ -9,7 +9,7 @@ public class VolatileStopDemo extends Thread {
 	/**
 	 * 可能低版本的JDK存在此缺陷(JDK8测试不存在这类情况)
 	 * 需要指定volatile关键字,线程工作内存已经载入isStop=false变量的值，
-	 * 由其他线程修改isStop=true的值写入主存，但是其他已载入该值得线程是不可见的，所以线程不会终止。
+	 * 由其他线程修改isStop=true的值写入主存，但是其他已载入该值得线程(工作内存)是不可见的，所以线程不会终止。
 	 */
 	public volatile boolean isStop = false;
 	
