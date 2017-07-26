@@ -7,25 +7,22 @@ package com.dark.jvm;
  * @author darkidiot
  */
 public class StackAllocationDemo {
+	// User对象占用内存大小：16+4+8+padding/4=32
 	static class User {
-		private int id;
-		private String name;
+		private int id = 1;
+		private String name = "sixtrees";
 	}
 	/** user的作用域是整个StackAllocationDemo Class，所以user对象是可以逃逸出函数体的。 */
 	private static User user;
 
 	public static void heapAllocation() {
 		user = new User();
-		user.id = 1;
-		user.name = "sixtrees";
 	}
 
 	/** *************************** split line *************************** */
 	public void stackAllocation() {
 		/** user的作用域是stackAllocation函数体，所以user对象是不可能逃逸出函数体的。 */
 		User user = new User();
-		user.id = 1;
-		user.name = "sixtrees";
 	}
 
 	
