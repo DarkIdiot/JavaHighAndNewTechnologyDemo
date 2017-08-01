@@ -1,50 +1,53 @@
 package com.dark.jvm;
-
 /**
  * 指令重排-破坏线程间的有序性
- * 
+ * 大多数现代微处理器都会采用将指令乱序执行（out-of-order execution，简称OoOE或OOE）的方法，
+ * 在条件允许的情况下，直接运行当前有能力立即执行的后续指令，避开获取下一条指令所需数据时造成的等待。通过乱序执行的技术，处理器可以大大提高执行效率。
  * @author darkidiot
  */
 public class InstructionReorderingDemo {
-	int a = 0;
-	boolean flag = false;
+    private static int x = 0, y = 0;
+    private static int a = 0, b =0;
 
-	public void writer() {
-		a = 1;
-		flag = true;
-	}
+    public static void main(String[] args) throws InterruptedException {
+        int i = 0;
+        for(;;) {
+            i++;
+            x = 0; y = 0;
+            a = 0; b = 0;
+            Thread one = new Thread(new Runnable() {
+                public void run() {
+                    //由于线程one先启动，下面这句话让它等一等线程two. 读着可根据自己电脑的实际性能适当调整等待时间.
+                    shortWait(56885);  // 事先计算每次线程启动的nano,计算出差值.
+                    a = 1;
+                    x = b;
+                }
+            });
 
-	public void reader() {
-		Integer i = null;
-		if (flag) {
-			i = a + 1;
-		}
-		System.out.println(i + "");
-	}
-	/**
-	 * 线程A首先执行writer()方法,
-	 * 线程B线程接着执行reader()方法,
-	 * 线程B在int i=a+1 是不一定能看到a已经被赋值为1,
-	 * 因为在writer中，两句话顺序可能打乱 (JDK8很难重试)
-	 * @param args
-	 * @throws InterruptedException
-	 */
-	public static void main(String[] args) throws InterruptedException {
-		InstructionReorderingDemo instructionReorderingDemo = new InstructionReorderingDemo();
-		Thread thread1 = new Thread(new Runnable() {
-			@Override
-			public void run() {
-				instructionReorderingDemo.writer();
-			}
-		});
-		Thread thread2 = new Thread(new Runnable() {
-			@Override
-			public void run() {
-				instructionReorderingDemo.reader();
-			}
-		});
-		thread1.start();
-		thread2.start();
-		Thread.sleep(10);
-	}
+            Thread other = new Thread(new Runnable() {
+                public void run() {
+                    b = 1;
+                    y = a;
+                }
+            });
+            one.start();other.start();
+            one.join();other.join();
+            String result = "第" + i + "次 (" + x + "," + y + ")";
+            if(x == 0 && y == 0) {
+                System.err.println(result);
+                break;
+            } else {
+                System.out.println(result);
+            }
+        }
+    }
+
+
+    public static void shortWait(long interval){
+        long start = System.nanoTime();
+        long end;
+        do{
+            end = System.nanoTime();
+        }while(start + interval >= end);
+    }
 }
