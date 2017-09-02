@@ -51,7 +51,7 @@ public class ConnectionFactory
     {
         DataSource source = null;
         try{
-            lookup(name);
+        	source = lookup(name);
             throw new NameAlreadyBoundException(name);
         }catch(NameNotFoundException e){
             source = new DataSourceImpl(param);

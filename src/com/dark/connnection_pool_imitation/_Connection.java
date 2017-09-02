@@ -62,7 +62,7 @@ public class _Connection implements InvocationHandler {
 	        if(CLOSE_METHOD_NAME.equals(m.getName()))
 	            {
 	        		setInUse(false);
-	        		this.clone();
+	        		this.close();
 	            }        
 	        else
 	            obj = m.invoke(conn, args); 

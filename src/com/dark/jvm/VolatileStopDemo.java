@@ -20,7 +20,7 @@ public class VolatileStopDemo extends Thread {
 			i++;
 			System.out.println("thread is running now. and the Number is " + i);
 			try {
-				Thread.sleep(100);
+				Thread.sleep(2);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
