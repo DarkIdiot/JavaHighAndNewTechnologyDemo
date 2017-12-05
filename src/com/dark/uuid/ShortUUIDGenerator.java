@@ -2,10 +2,12 @@ package com.dark.uuid;
 
 import java.util.UUID;
 
-import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-@Slf4j
+
 public class ShortUUIDGenerator {
+	private static Logger logger = LoggerFactory.getLogger(ShortUUIDGenerator.class);
 
 	public static String[] chars = new String[] { "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n",
 			"o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "0", "1", "2", "3", "4", "5", "6", "7", "8",
@@ -24,6 +26,6 @@ public class ShortUUIDGenerator {
 	}
 	
 	public static void main(String[] args) {
-		log.info(generateShortUuid());
+		logger.info(generateShortUuid());
 	}
 }
